@@ -11,6 +11,8 @@ public class ExampleFunction : MonoBehaviour
         AddHealth(20); // Menambahkan 20 ke health
         AddHealth(-10); // Mengurangi 10 dari health
         AddHealth(50); // Menambahkan 50 ke health
+        int sum = AddTwoNumbers(5, 10); // Menjumlahkan 5 dan 10
+        Debug.Log("Hasil penjumlahan dari AddTwoNumbers: " + sum);
     }
 
     // Update is called once per frame
@@ -31,5 +33,13 @@ public class ExampleFunction : MonoBehaviour
         Debug.Log("Health awal: " + health);
         health += amount;
         Debug.Log("Health setelah ditambahkan: " + health);
+    }
+
+    int AddTwoNumbers(int a, int b)
+    {
+        // Contoh fungsi untuk menambahkan dua angka
+        int result = a + b;
+        Debug.Log("Hasil penjumlahan: " + result);
+        return result;
     }
 }
