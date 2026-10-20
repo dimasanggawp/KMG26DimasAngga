@@ -5,7 +5,7 @@ public class Player
 {
     public string name;
     public int health;
-    public int attack;
+    private int attack;
 
     //Constructor untuk menginisialisasi nilai default dari atribut Player
     public Player(string name, int health, int attack)
