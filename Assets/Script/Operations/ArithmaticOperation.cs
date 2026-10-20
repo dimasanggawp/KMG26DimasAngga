@@ -9,7 +9,10 @@ public class ArithmeticOperation : MonoBehaviour
     void Start()
     {
         int plusResult = number1 + number2;
+        string firstName = "Dimas";
+        string lastName = "Angga";
         Debug.Log("Hasil: " + plusResult);
+        Debug.Log("Nama Lengkap: " + firstName + " " + lastName + " " + number1);
     }
 
     // Update is called once per frame
