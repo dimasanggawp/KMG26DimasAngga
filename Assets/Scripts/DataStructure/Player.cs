@@ -14,5 +14,17 @@ public class Player
         this.health = health;
         this.attack = attack;
     }
+
+    public void Info()
+    {
+        Debug.Log("Player Name: " + name);
+        Debug.Log("Player Health: " + health);
+        Debug.Log("Player Attack: " + attack);
+    }
+
+    public void AttackEnemy(Enemy enemy)
+    {
+        enemy.TakeDamage(attack);
+    }
     
 }
