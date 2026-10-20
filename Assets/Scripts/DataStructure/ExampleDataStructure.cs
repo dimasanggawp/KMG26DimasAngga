@@ -5,15 +5,9 @@ public class ExampleDataStructure : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Player player1 = new Player(); 
-        player1.name = "Dimas";
-        player1.health = 100;
-        player1.attack = 10;
+        Player player1 = new Player("Dimas", 100, 10); 
 
-        Player player2 = new Player();
-        player2.name = "Angga";
-        player2.health = 80;
-        player2.attack = 20;
+        Player player2 = new Player("Angga", 80, 20);
 
         Debug.Log("Player Name: " + player1.name);
         Debug.Log("Player Health: " + player1.health);
