@@ -163,6 +163,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ef25d213ebd4bb18a8eeed05ac7c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1:
+    name: Dimas
+    health: 100
+  player2:
+    name: Angga
+    health: 80
+  slime:
+    name: Slime
+    health: 10
+  arrayVector3:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  arrayEnemy:
+  - name: Goblin
+    health: 0
+  - name: Slime
+    health: 0
+  - name: Griffin
+    health: 0
 --- !u!1 &2001375532
 GameObject:
   m_ObjectHideFlags: 0

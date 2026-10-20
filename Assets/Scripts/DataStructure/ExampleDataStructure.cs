@@ -8,6 +8,10 @@ public class ExampleDataStructure : MonoBehaviour
     [SerializeField]
     private Enemy slime = new Enemy("Slime", 10);
 
+    private string[] arrayNames;
+    public Vector3[] arrayVector3;
+    public Enemy[] arrayEnemy;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,12 +23,28 @@ public class ExampleDataStructure : MonoBehaviour
         //Debug.Log("Player Health: " + player2.health);
         //Debug.Log("Player Attack: " + player2.attack);
         
-        player1.Info();
-        player2.Info();
+        // player1.Info();
+        // player2.Info();
 
         //slime.TakeDamage(5);
-        player2.AttackEnemy(slime);
-        Debug.Log("Enemy Name: " + slime.name);
-        Debug.Log("Enemy Health: " + slime.health);
+        // player2.AttackEnemy(slime);
+        // Debug.Log("Enemy Name: " + slime.name);
+        // Debug.Log("Enemy Health: " + slime.health);
+
+        arrayNames = new string[3];
+        arrayNames[0] = "Dimas";
+        arrayNames[1] = "Angga";
+        arrayNames[2] = "Budi";
+
+        for (int i = 0; i < arrayNames.Length; i++)
+        {
+            Debug.Log("Array Name: " + arrayNames[i]);
+        }
+
+        for (int i = 0; i < arrayEnemy.Length; i++)
+        {
+            Debug.Log("Array Enemy Name: " + arrayEnemy[i].name);
+        }
+
     }
 }
