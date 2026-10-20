@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ExampleBranch : MonoBehaviour
 {
-    public int health = 20;
+    public int health = 120;
     public int score; //80-100 = A, 70-79 = B, 60-69 = C, 50-59 = D, <50 = E
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -11,6 +11,18 @@ public class ExampleBranch : MonoBehaviour
         Damage(10);
         Damage(10);
         CheckScore(score);
+
+        for (int i = 0; i < 3; i++)
+        {
+            Damage(10);
+            Debug.Log("Health saat ini: " + health);
+        }
+
+        while (health > 0)
+        {
+            Damage(10);
+            Debug.Log("Health saat ini: " + health);
+        }
     }
 
     // Update is called once per frame
