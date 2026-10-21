@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ExampleDataStructure : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ExampleDataStructure : MonoBehaviour
     void Start()
     {
         ContohStruct();
+        ContohList();
 
         //Debug.Log("Player Name: " + player1.name);
         //Debug.Log("Player Health: " + player1.health);
@@ -58,5 +60,19 @@ public class ExampleDataStructure : MonoBehaviour
         Debug.Log("Item ID: " + Sword.id);
         Debug.Log("Item Name: " + Sword.name);
         Debug.Log("Item Quantity: " + Sword.quantity);
+    }
+
+    void ContohList()
+    {
+        List<int> listNumbers = new List<int>();
+        listNumbers.Add(1);
+        listNumbers.Add(2);
+        listNumbers.Add(3);
+
+        Debug.Log("Elemen Pertama: " + listNumbers[0]);
+        Debug.Log("Ukuran List: " + listNumbers.Count);
+
+        listNumbers.RemoveAt(0);
+        Debug.Log("Elemen Setelah Remove: " + listNumbers[0]);
     }
 }
