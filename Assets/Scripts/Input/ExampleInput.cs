@@ -3,6 +3,8 @@ using UnityEngine;
 public class ExampleInput : MonoBehaviour
 {
     public int health = 100;
+    public GameObject Prefab;
+    public GameObject SpawnedObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,12 +17,20 @@ public class ExampleInput : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) //Mendeteksi klik kiri mouse
         {
             Debug.Log("Klik kiri ditekan");
-            TakeDamage(10);
+            //TakeDamage(10);
+            if (SpawnedObject == null)
+            {
+                SpawnedObject = Instantiate(Prefab);
+            }
         }
         if (Input.GetMouseButtonDown(1)) //Mendeteksi klik kanan mouse
         {
             Debug.Log("Klik kanan ditekan");
-            Heal(10);
+            //Heal(10);
+            if (SpawnedObject != null)
+            {
+                Destroy(SpawnedObject);
+            }
         }
         // if (Input.GetMouseButtonUp(0)) //Mendeteksi klik kiri mouse dilepas
         // {
