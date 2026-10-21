@@ -93,5 +93,8 @@ public class ExampleDataStructure : MonoBehaviour
         Debug.Log("Has Potion: " + hasPotion);
 
         Debug.Log("Apakah memiliki Rusty Sword: " + listItems.Exists(item => item.name == "Rusty Sword"));
+
+        Item potion = listItems.Find(item => item.name == "Potion");
+        Debug.Log("Nama Item: " + potion.name);
     }
 }
