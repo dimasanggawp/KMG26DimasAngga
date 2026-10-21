@@ -15,6 +15,8 @@ public class ExampleDataStructure : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ContohStruct();
+
         //Debug.Log("Player Name: " + player1.name);
         //Debug.Log("Player Health: " + player1.health);
         //Debug.Log("Player Attack: " + player1.attack);
@@ -31,20 +33,30 @@ public class ExampleDataStructure : MonoBehaviour
         // Debug.Log("Enemy Name: " + slime.name);
         // Debug.Log("Enemy Health: " + slime.health);
 
-        arrayNames = new string[3];
-        arrayNames[0] = "Dimas";
-        arrayNames[1] = "Angga";
-        arrayNames[2] = "Budi";
+        // arrayNames = new string[3];
+        // arrayNames[0] = "Dimas";
+        // arrayNames[1] = "Angga";
+        // arrayNames[2] = "Budi";
 
-        for (int i = 0; i < arrayNames.Length; i++)
-        {
-            Debug.Log("Array Name: " + arrayNames[i]);
-        }
+        // for (int i = 0; i < arrayNames.Length; i++)
+        // {
+        //     Debug.Log("Array Name: " + arrayNames[i]);
+        // }
 
-        for (int i = 0; i < arrayEnemy.Length; i++)
-        {
-            Debug.Log("Array Enemy Name: " + arrayEnemy[i].name);
-        }
+        // for (int i = 0; i < arrayEnemy.Length; i++)
+        // {
+        //     Debug.Log("Array Enemy Name: " + arrayEnemy[i].name);
+        // }
 
+    }
+
+    Player Dimas;
+    Item Sword;
+    void ContohStruct()
+    {
+        Sword = new Item("001", "Excalibur Sword", 1);
+        Debug.Log("Item ID: " + Sword.id);
+        Debug.Log("Item Name: " + Sword.name);
+        Debug.Log("Item Quantity: " + Sword.quantity);
     }
 }
