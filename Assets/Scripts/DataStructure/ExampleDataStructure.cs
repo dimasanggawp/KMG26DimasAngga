@@ -12,12 +12,14 @@ public class ExampleDataStructure : MonoBehaviour
     private string[] arrayNames;
     public Vector3[] arrayVector3;
     public Enemy[] arrayEnemy;
+    public List<Item> listItems;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ContohStruct();
-        ContohList();
+        //ContohStruct();
+        //ContohList();
+        ContohListItem();
 
         //Debug.Log("Player Name: " + player1.name);
         //Debug.Log("Player Health: " + player1.health);
@@ -74,5 +76,20 @@ public class ExampleDataStructure : MonoBehaviour
 
         listNumbers.RemoveAt(0);
         Debug.Log("Elemen Setelah Remove: " + listNumbers[0]);
+        Debug.Log("Ukuran List Setelah Remove: " + listNumbers.Count);
+
+        listNumbers.Remove(2);
+        Debug.Log("Ukuran List Setelah Remove: " + listNumbers.Count);
+    }
+
+    void ContohListItem()
+    {
+        List<string> inventory = new List<string>();
+        inventory.Add("Potion");
+        inventory.Add("Sword");
+        inventory.Add("Shield");
+
+        bool hasPotion = inventory.Exists(item => item == "Potion");
+        Debug.Log("Has Potion: " + hasPotion);
     }
 }
