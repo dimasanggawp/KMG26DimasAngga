@@ -91,5 +91,7 @@ public class ExampleDataStructure : MonoBehaviour
 
         bool hasPotion = inventory.Exists(item => item == "Potion");
         Debug.Log("Has Potion: " + hasPotion);
+
+        Debug.Log("Apakah memiliki Rusty Sword: " + listItems.Exists(item => item.name == "Rusty Sword"));
     }
 }
