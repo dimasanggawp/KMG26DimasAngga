@@ -19,4 +19,6 @@ public class RotatingObject : MonoBehaviour
     {
         transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime);
     }
+
+    
 }

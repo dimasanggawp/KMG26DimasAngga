@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 985071686}
   - component: {fileID: 985071685}
   - component: {fileID: 985071687}
+  - component: {fileID: 985071688}
   m_Layer: 0
   m_Name: MovingSquare
   m_TagString: Untagged
@@ -221,6 +222,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   isMovingUp: 1
+--- !u!114 &985071688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985071684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a56801e746d4925bc2ac1e44f1b619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 100
 --- !u!1 &1284434515
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a56801e746d4925bc2ac1e44f1b619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateSpeed: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
