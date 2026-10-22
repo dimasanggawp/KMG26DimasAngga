@@ -37,4 +37,9 @@ public class ColorManager : MonoBehaviour
     {
         ChangeColor(Color.green);
     }
+
+    public void RandomWarna()
+    {
+        ChangeColor(new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1f));
+    }
 }
