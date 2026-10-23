@@ -5,8 +5,10 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public event Action OnScoreChanged;
+    public event Action<int, int> OnTimerChanged;
     public int score;
     public int timer;
+    public int maxTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,11 +48,13 @@ public class GameManager : MonoBehaviour
 
     IEnumerator TimerCoroutine()
     {
-        while(timer < 10)
+        while(timer <= maxTime)
         {
             Debug.Log("Timer : " + timer);
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
             timer++;
+
+            OnTimerChanged?.Invoke(timer, maxTime);
         }
     }
 }
